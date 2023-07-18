@@ -10,17 +10,7 @@ pool:
   agent-hs
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-- task: NodeTool@0
-  inputs:
-    versionSource: 'spec'
-    versionSpec: 10.19.0
-    checkLatest: true
-
 - script: |
     npm install
-    npm version 1.0.$(Build.BuildId) && npm publish
+    npm version 1.0.1 && npm publish
   displayName: 'npm install and build'
