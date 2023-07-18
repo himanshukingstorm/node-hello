@@ -22,8 +22,7 @@ steps:
 
 - script: |
     npm install
-    npm version 1.0.${Build.BuildId}
-    npm package 
+    npm version 1.0.${Build.BuildId} 
     npm publish
     npm run build
   displayName: 'npm install and build'
